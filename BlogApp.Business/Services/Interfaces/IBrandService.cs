@@ -1,4 +1,5 @@
-﻿using BlogApp.Core.Entities.Common;
+﻿using BlogApp.Business.DTOs.BrandDto;
+using BlogApp.Core.Entities.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,13 @@ namespace BlogApp.Business.Services.Interfaces
 {
     public  interface IBrandService
     {
-        Task<ICollection<Brand>> GetAllAsync(Expression<Func<Brand, bool>>? expression = null,
-            Expression<Func<Brand, object>>? OrderByExpression = null,
-            bool isDescending = false
-            , params string[] includes);
+        Task<ICollection<Brand>> GetAllAsync();
+
+        Task<Brand> GetByIdAsync(int id);
+        Task <Brand>Create(CreateBrandDto brand);
+        Task<Brand>Update(int id, UpdateBrandDto brand);
+
+        Task<Brand> Delete(int id);
+        
     }
 }

@@ -2278,23 +2278,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\II novbe\\.nuget\\packages\\": {},
+    "C:\\Users\\owner\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\II novbe\\source\\repos\\BlogApp\\BlogApp.API\\BlogApp.API.csproj",
+      "projectUniqueName": "C:\\Users\\owner\\Desktop\\ArchitectureAPI\\BlogApp.API\\BlogApp.API.csproj",
       "projectName": "BlogApp.API",
-      "projectPath": "C:\\Users\\II novbe\\source\\repos\\BlogApp\\BlogApp.API\\BlogApp.API.csproj",
-      "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\II novbe\\source\\repos\\BlogApp\\BlogApp.API\\obj\\",
+      "projectPath": "C:\\Users\\owner\\Desktop\\ArchitectureAPI\\BlogApp.API\\BlogApp.API.csproj",
+      "packagesPath": "C:\\Users\\owner\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\owner\\Desktop\\ArchitectureAPI\\BlogApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2309,8 +2309,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\II novbe\\source\\repos\\BlogApp\\BlogApp.Business\\BlogApp.Business.csproj": {
-              "projectPath": "C:\\Users\\II novbe\\source\\repos\\BlogApp\\BlogApp.Business\\BlogApp.Business.csproj"
+            "C:\\Users\\owner\\Desktop\\ArchitectureAPI\\BlogApp.Business\\BlogApp.Business.csproj": {
+              "projectPath": "C:\\Users\\owner\\Desktop\\ArchitectureAPI\\BlogApp.Business\\BlogApp.Business.csproj"
             }
           }
         }
@@ -2355,7 +2355,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

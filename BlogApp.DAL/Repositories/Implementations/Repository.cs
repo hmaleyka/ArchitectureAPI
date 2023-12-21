@@ -14,10 +14,11 @@ namespace BlogApp.DAL.Repositories.Implementations
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity, new()
     {
         private readonly AppDbContext _context;
-
+        private DbSet<TEntity> _table;
         public Repository(AppDbContext context)
         {
             _context = context;
+            _table = _context.Set<TEntity>();
         }
         public DbSet<TEntity> Table =>  _context.Set<TEntity>();
 
@@ -27,7 +28,7 @@ namespace BlogApp.DAL.Repositories.Implementations
             , params string[] includes)
         {
             IQueryable<TEntity> query = Table/*.Where(b=>b.IsDeleted==false)*/;
-if (expression is not null)
+            if (expression is not null)
             {
                 query = query.Where(expression);
             }
@@ -48,26 +49,32 @@ if (expression is not null)
              return  query;
 
         }
-        public Task Create(TEntity entity)
+        public async  Task<TEntity> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _table.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+        }
+        public async  Task Create(TEntity entity)
+        {
+            await _table.AddAsync(entity);
         }
 
-        public void Delete(TEntity entity)
+        public  void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            _table.Remove(entity);
         }
-
-     
-
-        public Task SaveChangesAsync()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _table.Update(entity);
         }
+
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
+      
+
+       
     }
 }
